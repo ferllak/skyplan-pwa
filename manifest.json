@@ -1,0 +1,45 @@
+{
+    "name": "SkyPlan Events",
+    "short_name": "SkyPlan",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0d6efd",
+    "icons": [
+        {
+            "src": "icons/Custom-Icon-Design-Pretty-Office-12-Cloud.48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Custom-Icon-Design-Pretty-Office-12-Cloud.64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Custom-Icon-Design-Pretty-Office-12-Cloud.72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Custom-Icon-Design-Pretty-Office-12-Cloud.96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Custom-Icon-Design-Pretty-Office-12-Cloud.128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Custom-Icon-Design-Pretty-Office-12-Cloud.256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Custom-Icon-Design-Pretty-Office-12-Cloud.512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda | SkyPlan Events</title>
+    <link rel="icon" type="image/png" href="icons/Custom-Icon-Design-Pretty-Office-12-Cloud.48.png">
+    <link rel="apple-touch-icon" href="icons/Custom-Icon-Design-Pretty-Office-12-Cloud.128.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Plaster', system-ui; font-size: 2.0rem; letter-spacing: 2px;">
+                SkyPlan Events
+            </a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Hizmetler</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <section class="container my-5">
+        <h1>Hakkımızda</h1>
+        <p class="lead">
+            SkyPlan Events, etkinlik ve organizasyon planlamasında şehir bazlı hava tahminleri sunarak,
+            etkinliklerinizin sorunsuz gerçekleşmesini sağlar. Amacımız, doğru ve güncel bilgilerle etkinlik
+            planlamanızı kolaylaştırmaktır.
+        </p>
+
+        <hr>
+
+        <h3>Kullanılan Teknolojiler</h3>
+        <ul>
+            <li>API: <a href="https://open-meteo.com/" target="_blank">Open-Meteo</a></li>
+            <li>CSS Framework: <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a></li>
+            <li>PWA Özellikleri: Kurulabilir, çevrimdışı çalışma, service worker ve manifest.json</li>
+        </ul>
+
+        <hr>
+
+        <h3>Offline Çalışma</h3>
+        <p>
+            Uygulama offline durumlarda önceden cache’lenmiş HTML, CSS ve JS dosyalarını kullanarak temel
+            içerikleri göstermeye devam eder. Offline sayfası sayesinde kullanıcılar bağlantı olmasa bile bilgilere
+            ulaşabilir.
+        </p>
+
+        <a href="index.html" class="btn btn-secondary mt-4">← Geri Dön</a>
+    </section>
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2026 SkyPlan Events. Tüm hakları saklıdır.</p>
+            <div class="mb-2">
+                <a href="#" class="text-white me-3">Facebook</a>
+                <a href="#" class="text-white me-3">Instagram</a>
+                <a href="#" class="text-white me-3">Twitter</a>
+                <a href="#" class="text-white">LinkedIn</a>
+            </div>
+            <p class="small">Profesyonel etkinlik ve organizasyon planlama çözümleri.</p>
+        </div>
+    </footer>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"
+        class="btn btn-primary rounded-circle shadow p-3">
+        ↑
+    </button>
+</body>
+
+</html>

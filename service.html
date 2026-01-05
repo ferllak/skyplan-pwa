@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hizmetler | SkyPlan Events</title>
+    <link rel="icon" type="image/png" href="icons/Custom-Icon-Design-Pretty-Office-12-Cloud.48.png">
+    <link rel="apple-touch-icon" href="icons/Custom-Icon-Design-Pretty-Office-12-Cloud.128.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Plaster', system-ui; font-size: 2.0rem; letter-spacing: 2px;">
+                SkyPlan Events
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="service.html">Hizmetler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- İÇERİK -->
+    <section class="container my-5">
+        <h1>Hava Planlama Hizmeti</h1>
+        <p class="text-muted">
+            Şehir ve ilçe seçerek hava durumu detaylarına ulaşın.
+        </p>
+
+        <!-- ŞEHİR -->
+        <div class="mb-3">
+            <label class="form-label">Şehir Seç</label>
+            <select id="citySelect" class="form-select">
+                <option value="">Seçiniz</option>
+            </select>
+        </div>
+
+        <!-- İLÇE -->
+        <div class="mb-3">
+            <label class="form-label">İlçe Seç</label>
+            <select id="districtSelect" class="form-select" disabled>
+                <option value="">Önce şehir seçin</option>
+            </select>
+        </div>
+
+        <!-- BUTON -->
+        <button id="detailBtn" class="btn btn-primary" disabled>
+            Detayı Gör
+        </button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 SkyPlan Events</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/service.js"></script>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"
+        class="btn btn-primary rounded-circle shadow p-3">
+        ↑
+    </button>
+</body>
+
+</html>

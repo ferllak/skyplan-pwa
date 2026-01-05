@@ -1,0 +1,37 @@
+[
+    {
+        "name": "İstanbul",
+        "lat": 41.01,
+        "lon": 28.97,
+        "temp": 15,
+        "wind": 12
+    },
+    {
+        "name": "Ankara",
+        "lat": 39.93,
+        "lon": 32.85,
+        "temp": 10,
+        "wind": 20
+    },
+    {
+        "name": "İzmir",
+        "lat": 38.42,
+        "lon": 27.14,
+        "temp": 18,
+        "wind": 15
+    },
+    {
+        "name": "Antalya",
+        "lat": 36.89,
+        "lon": 30.71,
+        "temp": 22,
+        "wind": 5
+    },
+    {
+        "name": "Bursa",
+        "lat": 40.18,
+        "lon": 29.06,
+        "temp": 14,
+        "wind": 8
+    }
+]

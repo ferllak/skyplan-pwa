@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyPlan Events | Akıllı Hava Planlama</title>
+    <link rel="icon" type="image/png" href="icons/Custom-Icon-Design-Pretty-Office-12-Cloud.48.png">
+    <link rel="apple-touch-icon" href="icons/Custom-Icon-Design-Pretty-Office-12-Cloud.128.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0d6efd">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Plaster', system-ui; font-size: 2.0rem; letter-spacing: 2px;">
+                SkyPlan Events
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Hizmetler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="bg-light py-5">
+        <div class="container text-center">
+            <h1 class="fw-bold">Etkinlikleriniz İçin Akıllı Hava Planlama</h1>
+            <p class="lead text-muted">
+                Open-Meteo verileriyle şehir bazlı hava analizleri sunuyoruz.
+            </p>
+        </div>
+    </header>
+
+    <!-- SEARCH (KULLANICI ETKİLEŞİMİ - ZORUNLU) -->
+    <section class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control"
+                        placeholder="Şehir ara (İstanbul, Yozgat, Van...)">
+                    <button class="btn btn-outline-primary" type="button" id="locateBtn" title="Konumumu Bul">
+                        📍 Konum
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <section id="favoritesSection" class="container my-4 d-none">
+        <h3 class="mb-3">⭐ Favori Şehirlerim</h3>
+        <div id="favoritesList" class="row g-3">
+        </div>
+        <hr class="my-4">
+    </section>
+
+    <!-- FEATURED SERVICES -->
+    <section class="container my-5">
+        <h2 class="mb-2">Öne Çıkan Şehir Bazlı Hizmetler</h2>
+        <p class="text-muted mb-4">
+            Etkinlik planlamasında en çok tercih edilen şehirler için güncel hava tahminleri
+        </p>
+
+        <!-- API’den gelen kartlar -->
+        <div id="cityList" class="row g-4">
+            <!-- JS ile doldurulacak -->
+        </div>
+
+        <!-- Loading / Error -->
+        <div id="status" class="text-center text-muted mt-4"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2026 SkyPlan Events. Tüm hakları saklıdır.</p>
+            <div class="mb-2">
+                <a href="#" class="text-white me-3">Facebook</a>
+                <a href="#" class="text-white me-3">Instagram</a>
+                <a href="#" class="text-white me-3">Twitter</a>
+                <a href="#" class="text-white">LinkedIn</a>
+            </div>
+            <p class="small">
+                Profesyonel etkinlik ve organizasyonlar için hava odaklı planlama çözümleri.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- SERVICE WORKER -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("service-worker.js")
+                    .then(reg => console.log("Service Worker kayıtlı:", reg.scope))
+                    .catch(err => console.log("Service Worker hata:", err));
+            });
+        }
+    </script>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"
+        class="btn btn-primary rounded-circle shadow p-3">
+        ↑
+    </button>
+</body>
+
+</html>
